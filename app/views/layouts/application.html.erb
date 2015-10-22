@@ -7,8 +7,28 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <header role="banner">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <%= link_to "Athletes Den", root_path, class: "navbar-brand" %>
+          </div>
+          <div class="navbar-collapse" id="bs-example-navbar-collapse-1"  >
+            <ul class="nav navbar-nav">
+              <li class="active"><%= link_to "Home", root_path %>
+                <span class="sr-only">(current)</span>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 <%= yield %>
-
 </body>
 </html>
