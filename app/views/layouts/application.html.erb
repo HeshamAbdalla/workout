@@ -19,17 +19,26 @@
             </button>
             <%= link_to "Athletes Den", root_path, class: "navbar-brand" %>
           </div>
-          <div class="navbar-collapse" id="bs-example-navbar-collapse-1"  >
+          <div class="navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
               <li class="active"><%= link_to "Home", root_path %>
                 <span class="sr-only">(current)</span>
             </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Sign up", new_user_registration_path %></li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
   <div class="container">
+    <% flash.each do |name,msg| %>
+    <div class='alert alert-<%="#{name}"%>'>
+      <a href="#" class="close" data-dismiss="alert" &#215;></a>
+      <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+    </div>
+    <% end %>
     <%= yield %>
 </div>
 </body>
