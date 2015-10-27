@@ -1,0 +1,11 @@
+<h1 class="text-center">New Exercise for <%= current_user.full_name %></h1>
+
+<%= render 'form' %>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="col-md-10 col-md-offset-2">
+      <%= link_to "Back", user_exercises_path(current_user), class: "btn btn-primary link", id: "new-exer-btn" %>
+    </div>
+  </div>
+</div>
