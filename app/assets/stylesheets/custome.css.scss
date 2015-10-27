@@ -4,3 +4,32 @@
 body{
   padding-top: 52px;
 }
+
+.alert-error{
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #b94a48;
+  text-align: left;
+}
+.alert-alert, #error_explanation{
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+  text-align: left;
+}
+.alert-success{
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+}
+.alert-notice{
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+}
+#error_explanation{
+  padding: 15px 15px 15px 30px;
+  margin-bottom: 30px;
+}
