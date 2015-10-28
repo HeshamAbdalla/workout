@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.turbolinks
+//= require raphael-min
+//= require morris
 //= require jquery-ui/datepicker
 //= require bootstrap-sprockets
 //= require turbolinks
