@@ -6,6 +6,8 @@ RSpec.feature "Signing users up" do
     visit "/"
     click_link "Sign up"
 
+    fill_in "First name", with: "joy"
+    fill_in "Last name", with: "Doe"
     fill_in "Email", with: "joy@example.com"
     fill_in "Password", with: "Password"
     fill_in "Password confirmation", with: "Password"
@@ -13,5 +15,7 @@ RSpec.feature "Signing users up" do
     click_button "Sign up"
 
     expect(page).to have_content("You have signed up successfully.")
+    visit "/"
+    expect(page).to have_content("joy Doe")
   end
 end

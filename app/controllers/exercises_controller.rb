@@ -50,7 +50,7 @@ class ExercisesController < ApplicationController
   private
 
   def exercise_params
-    params.require(:exercise).permit(:duration_in_min, :workout, :workout_date)
+    params.require(:exercise).permit(:duration_in_min, :workout, :workout_date, :user_id,:first_name, :last_name,)
   end
 
   def set_exercise
