@@ -5,6 +5,7 @@ gem 'autoprefixer-rails', '~>5.2.0'
 gem 'jquery-turbolinks', '~> 2.1'
 gem 'devise', '~>3.5.1'
 gem 'jquery-ui-rails', '5.0.5'
+gem 'will_paginate-bootstrap'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use SCSS for stylesheets
