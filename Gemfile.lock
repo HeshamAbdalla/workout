@@ -107,6 +107,8 @@ GEM
     jquery-turbolinks (2.1.0)
       railties (>= 3.1.0)
       turbolinks
+    jquery-ui-rails (5.0.5)
+      railties (>= 3.2.16)
     json (1.8.3)
     listen (3.0.3)
       rb-fsevent (>= 0.9.3)
@@ -252,6 +254,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks (~> 2.1)
+  jquery-ui-rails (= 5.0.5)
   pg
   pry
   puma
