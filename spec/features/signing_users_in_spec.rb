@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.feature "Signing user in with valid credentials" do
 
   before do
-    @joy = User.create(email: "joy@example.com", password:"password")
+    @joy = User.create(email: "joy@example.com", first_name: "joy",last_name: "doe", password:"password")
   end
 
   scenario "Sign in users" do
