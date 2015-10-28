@@ -1,0 +1,8 @@
+<div class="row search-result">
+  <% @athletes.each do |ath| %>
+  <div class="col-md-10 col-md-offset-2 well member">
+    <%= ath.full_name %>
+  </div>
+  <% end %>
+</div>
+<%= will_paginate @athletes, renderer: BootstrapPagination::Rails %>
