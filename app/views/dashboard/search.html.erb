@@ -1,8 +1,16 @@
-<div class="row search-result">
-  <% @athletes.each do |ath| %>
-  <div class="col-md-10 col-md-offset-2 well member">
-    <%= ath.full_name %>
+<div class="container">
+  <div class="row search-result">
+    <% @athletes.each do |ath| %>
+    <div class="col-md-10 col-xs-offset-1 well member">
+      <%= ath.full_name %>
+      <% if current_user %>
+        <%= link_to "Follow", friendships_path(friend_id: ath.id), method: :post,
+          class: "btn btn-primary pull-right" unless current_user.follows_or_same?(ath) %>
+        <% end %>
+    </div>
+    <% end %>
+
   </div>
-  <% end %>
+  <%= will_paginate @athletes, renderer: BootstrapPagination::Rails %>
+
 </div>
-<%= will_paginate @athletes, renderer: BootstrapPagination::Rails %>
