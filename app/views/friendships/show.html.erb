@@ -1,2 +1,43 @@
-<h1>Friendships#show</h1>
-<p>Find me in app/views/friendships/show.html.erb</p>
+<div class="col-md-8">
+  <p id="notice">
+    <%= notice %>
+  </p>
+
+  <h1><%= @friend.full_name %>'s Exercises</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>
+          Duration (min)
+        </th>
+        <th>
+          Workout Details
+        </th>
+        <th>
+          Activity Date
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @exercises.each do |exe| %>
+      <tr>
+        <td>
+          <%= exe.duration_in_min %>
+        </td>
+        <td>
+          <%= truncate(exe.workout, length: 100) %>
+        </td>
+        <td>
+          <%= exe.workout_date %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+  <%= content_tag :div, "", id: "chart", data: {workouts: @exercises} %>
+
+  <br>
+  <%= link_to "Back", user_exercises_path(current_user), class: "btn btn-primary link" %>
+</div>
